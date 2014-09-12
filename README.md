@@ -1,5 +1,7 @@
 # LightsOut
 
+![LightsOut](https://bytebucket.org/cacilhas/lightsout/raw/cd960a514aa20f4e652e002c88dbdd8ed125588d/src/images/lightsout.png)
+
 [LightsOut](http://en.wikipedia.org/wiki/Lights_Out_(game)) is the very
 first [Smalltalk](http://smalltalk.org/main/) example from
 [Squeak by Example](http://www.squeakbyexample.org/) and
