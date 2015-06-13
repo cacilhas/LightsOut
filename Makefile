@@ -11,9 +11,11 @@ ICON= LightsOut.icns
 #----------------------#
 
 TARGET= $(PROJECT_NAME).love
+LUACODE= src/conf.lua src/main.lua src/lightsout.lua
 ZIP= zip
 AR= tar cf -
 COMPRESS= xz -c
+CC= moonc
 RM= rm -rf
 
 ifeq ($(OS),Windows_NT)
@@ -80,9 +82,13 @@ endif
 endif
 
 
+%.lua: %.moon
+	$(CC) $<
+
+
 .PHONY: clean
 clean:
-	$(RM) $(TARGET) $(APP)
+	$(RM) $(TARGET) $(APP) $(LUACODE)
 
 
 .PHONY: mrproper
@@ -94,7 +100,7 @@ test:
 	$(LOVE) src
 
 
-$(TARGET):
+$(TARGET): $(LUACODE)
 ifeq ($(UNAME),Windows)
 	CHDIR src ; $(ZIP) ..\$@ -r *
 
