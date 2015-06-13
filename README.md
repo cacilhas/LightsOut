@@ -23,18 +23,18 @@ All you need to know, you find on the
 [project wiki](http://www.love2d.org/wiki/Main_Page).
 
 
-## Lua
+## MoonScript
 
-[Lua](http://www.lua.org/) is a powerful, fast, lightweight, embeddable
-scripting language.
+[MoonScript](http://moonscript.org/) is a dynamic scripting language that
+compiles into [Lua](http://www.lua.org/). It gives you the power of one of the
+fastest scripting languages combined with a rich set of features.
 
-Lua combines simple procedural syntax with powerful data description
-constructs based on associative arrays and extensible semantics. Lua is
-dynamically typed, runs by interpreting bytecode for a register-based
-virtual machine, and has automatic memory management with incremental
-garbage collection, making it ideal for configuration, scripting, and
-rapid prototyping.
+You can find a complete language reference on the
+[Language Guide](http://moonscript.org/reference/). For Lua reference, try the
+[Lua 5.2 Reference Manual](http://www.lua.org/manual/5.2/).
 
 
-You can find a complete language reference on
-[Lua 5.1 Reference Manual](http://www.lua.org/manual/5.1/).
+### BitBucket
+
+[BitBucket](https://bitbucket.org/cacilhas/lightsout) doesn’t let me set the
+project language to MoonScript. :-(

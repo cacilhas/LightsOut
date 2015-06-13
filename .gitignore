@@ -11,4 +11,5 @@
 .DS_Store
 .env
 tmp
+/src/*.lua
 .idea
