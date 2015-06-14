@@ -8,7 +8,7 @@ _LICENSE = "BSD 3-Clause License"
 import random, randomseed from math
 randomseed os.time!
 
-local LOCell, LOGame
+local *
 
 
 --------------------------------------------------------------------------------
