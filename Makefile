@@ -11,7 +11,7 @@ ICON= $(PROJECT_NAME).icns
 #----------------------#
 
 TARGET= $(PROJECT_NAME).love
-LUACODE= src/conf.lua src/main.lua src/lightsout.lua
+LUACODE= $(shell for SRC in src/*.moon; do echo $${SRC%.moon}.lua; done)
 ZIP= zip
 AR= tar cf -
 COMPRESS= xz -c
@@ -56,28 +56,23 @@ run: $(TARGET)
 $(DIST): $(APP)
 ifeq ($(UNAME),Windows)
 	$(ZIP) $@ $<
-
 else
 	$(AR) $< | $(COMPRESS) > $@
-
 endif
 
 
 $(APP): $(TARGET) $(ICON)
 ifeq ($(UNAME),Windows)
 	$(CP) /b $(LOVE)+$< $@
-
 else
 ifeq ($(UNAME),Darwin)
 	$(CP) -r /Applications/love.app $@
 	$(RM) $@/Contents/Resources/*
 	cat Info.plist > $@/Contents/Info.plist
 	$(CP) $? $@/Contents/Resources/
-
 else
 	cat $(LOVE) $< > $@
-    chmod +x $@
-
+	chmod +x $@
 endif
 endif
 
@@ -97,15 +92,13 @@ mrproper: clean
 
 
 .PHONY: test
-test:
+test: $(LUACODE)
 	$(LOVE) src
 
 
 $(TARGET): $(LUACODE)
 ifeq ($(UNAME),Windows)
 	CHDIR src ; $(ZIP) ..\$@ -r *
-
 else
 	(cd src && $(ZIP) ../$@ -r *)
-
 endif
