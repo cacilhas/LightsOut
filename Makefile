@@ -3,7 +3,7 @@
 #----------------#
 
 PROJECT_NAME= LightsOut
-ICON= LightsOut.icns
+ICON= $(PROJECT_NAME).icns
 
 
 #----------------------#
@@ -96,6 +96,7 @@ mrproper: clean
 	$(RM) $(DIST)
 
 
+.PHONY: test
 test:
 	$(LOVE) src
 
