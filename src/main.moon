@@ -1,7 +1,7 @@
 lightsout = assert require "lightsout"
 import floor from math
 
-app = {}
+app = :nil
 
 
 --------------------------------------------------------------------------------
@@ -21,6 +21,6 @@ love.draw = -> app.game\draw!
 
 --------------------------------------------------------------------------------
 love.mousereleased = (x, y, button) ->
-    if button == "l"
+    if button == 1
         app.game\toggle (floor (x / 16)) + 1,
                         (floor (y / 16)) + 1

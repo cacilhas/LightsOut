@@ -1,14 +1,12 @@
+local *
 _VERSION = "1.0"
 _DESCRIPTION = "MoonScript implementation of Smalltalk Lights Out"
 _AUTHOR = "ℜodrigo ℭacilhας <batalema@cacilhas.info>"
 _URL = "https://bitbucket.org/cacilhas/lightsout"
 _LICENSE = "BSD 3-Clause License"
 
-
 import random, randomseed from math
 randomseed os.time!
-
-local *
 
 
 --------------------------------------------------------------------------------
