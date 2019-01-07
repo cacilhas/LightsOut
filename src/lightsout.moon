@@ -2,7 +2,7 @@ local *
 _VERSION = "1.0"
 _DESCRIPTION = "MoonScript implementation of Smalltalk Lights Out"
 _AUTHOR = "ℜodrigo ℭacilhας <batalema@cacilhas.info>"
-_URL = "https://bitbucket.org/cacilhas/lightsout"
+_URL = "https://github.com/cacilhas/LightsOut"
 _LICENSE = "BSD 3-Clause License"
 
 import random, randomseed from math
@@ -55,7 +55,7 @@ class LOGame
 
     draw: (xoffset=0, yoffset=0) =>
         cell\draw xoffset, yoffset for cell in *@board
-        
+
         if @activecount == 0
             with love.graphics
                 .setFont @font

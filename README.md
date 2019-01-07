@@ -32,9 +32,3 @@ fastest scripting languages combined with a rich set of features.
 You can find a complete language reference on the
 [Language Guide](http://moonscript.org/reference/). For Lua reference, try the
 [Lua 5.2 Reference Manual](http://www.lua.org/manual/5.2/).
-
-
-### BitBucket
-
-[BitBucket](https://bitbucket.org/cacilhas/lightsout) doesn’t let me set the
-project language to MoonScript. :-(
